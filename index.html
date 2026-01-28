@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ISCN Translator | Cytogenetics Made Simple</title>
+    <meta
+      name="description"
+      content="Translate complex ISCN karyotype strings into plain English. Useful for patients and non-experts."
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main class="card">
+        <h1>ISCN Translator</h1>
+        <p class="subtitle">
+          Decode medical cytogenetic nomenclature into plain English
+        </p>
+
+        <div class="input-group">
+          <label for="karyotype-input">Karyotype String</label>
+          <div class="input-container">
+            <input
+              type="text"
+              id="karyotype-input"
+              placeholder="e.g., 46,XX,t(9;22)(q34;q11)"
+              aria-label="Enter Karyotype String"
+            />
+            <button id="translate-btn">Translate</button>
+          </div>
+        </div>
+
+        <div class="examples">
+          <span class="example-chip" data-karyotype="46,XX,t(9;22)(q34;q11)"
+            >Philadelphia Chromosome</span
+          >
+          <span class="example-chip" data-karyotype="45,X"
+            >Turner Syndrome</span
+          >
+          <span class="example-chip" data-karyotype="47,XY,+21"
+            >Down Syndrome</span
+          >
+          <span class="example-chip" data-karyotype="46,XY,del(5)(p15)"
+            >Cri du Chat</span
+          >
+          <span class="example-chip" data-karyotype="47,XX,+8,t(9;22)(q34;q11)"
+            >Complex Leukemia</span
+          >
+        </div>
+
+        <div class="result-container">
+          <div id="result">
+            <span style="color: var(--text-muted)"
+              >Translation will appear here...</span
+            >
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        Built for Cytogenetics Professionals & Patients &bull; &copy; 2026
+      </footer>
+    </div>
+
+    <script src="assets/js/translator.js"></script>
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>
