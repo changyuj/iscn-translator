@@ -52,17 +52,18 @@ function translateKaryotype(input) {
 
   const count = parts[0];
   const sex = parts[1];
+  const abnormalities = parts.slice(2);
 
+  // Check all parts after count for X/Y presence
+  const allDescriptors = parts.slice(1).join(",");
   let sexDescription = sex;
-  if (sex.includes("Y")) {
+  if (allDescriptors.includes("Y")) {
     sexDescription = "male";
-  } else if (sex.includes("X")) {
+  } else if (allDescriptors.includes("X")) {
     sexDescription = "female";
   }
 
   let description = `A karyotype with ${count} chromosomes and ${sexDescription} sex chromosomes (${sex}).`;
-
-  const abnormalities = parts.slice(2);
   if (abnormalities.length === 0) {
     description += " No structural or numerical abnormalities detected.";
   } else {
