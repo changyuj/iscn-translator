@@ -2,7 +2,7 @@
 
 A powerful, modern web application designed to translate complex International System for Human Cytogenetic Nomenclature (ISCN) strings into plain, easy-to-understand English.
 
-![ISCN Translator Preview](./assets/images/preview.png)
+![ISCN Translator Preview](../assets/images/preview.png)
 
 ## 🌟 Features
 
